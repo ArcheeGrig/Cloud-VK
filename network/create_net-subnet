@@ -1,0 +1,10 @@
+
+openstack network create <название сети>
+openstack network set <идентификатор сети> \
+  --name <новое имя сети> \
+  --dns-domain <новый DNS-домен>
+
+openstack subnet <set или unset> <идентификатор подсети> \
+  --allocation-pool start=<начальный IP-адрес для DHCP>,end=<конечный IP-адрес для DHCP> \
+  --dns-nameserver <адрес DNS-сервера> \
+  --host-route destination=<адрес сети назначения статического маршрута>,gateway=<адрес шлюза статического маршрута>
